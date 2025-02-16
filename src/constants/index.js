@@ -2,7 +2,10 @@ import { personal } from "../assets/images";
 import {
     contact,
     github,
-    linkedin
+    linkedin,
+    leaf,
+    hospital,
+    moltov
 } from "../assets/icons";
 
 export const skills = [
@@ -160,7 +163,7 @@ export const socialLinks = [
 
 export const projects = [
     {
-        iconUrl: "#",  // Replace with actual image URL or asset
+        iconUrl: moltov,  // Replace with actual image URL or asset
         theme: 'btn-back-red',
         name: 'Moltov - Movie Trailer Streaming App',
         description: 'A React.js-based movie streaming app that fetches real-time movie data from TMDB API. The app features an intuitive UI, efficient state management, and smooth API integrations.',
@@ -168,7 +171,7 @@ export const projects = [
         link: 'https://github.com/SudharsanSaravanan/MOLTOV-StreamingApp',
     },
     {
-        iconUrl: "#",  // Replace with actual image URL or asset
+        iconUrl: leaf,  // Replace with actual image URL or asset
         theme: 'btn-back-green',
         name: 'Leaf-Link - Real-Time Messaging App',
         description: 'Developed a messaging application using React.js and Firestore, with responsive UI implemented using Bootstrap 5 and Material UI. Ensured smooth real-time data synchronization for instant communication.',
@@ -176,7 +179,7 @@ export const projects = [
         link: 'https://github.com/SudharsanSaravanan/Leaf-Link-MessagingApp',
     },
     {
-        iconUrl: "",  // Replace with actual image URL or asset
+        iconUrl: hospital,  // Replace with actual image URL or asset
         theme: 'btn-back-blue',
         name: 'Hospital Management System',
         description: 'A DSA-based project utilizing Min-Heap Priority Queue, Graph (Adjacency List), and Binary Search Tree (BST) to prioritize patient care. Implemented Dijkstra’s algorithm for efficient room allocation, streamlining hospital operations.',
