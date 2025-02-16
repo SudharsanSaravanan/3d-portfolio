@@ -1,11 +1,11 @@
 import { personal } from "../assets/images";
 import {
-    contact,
     github,
     linkedin,
     leaf,
     hospital,
-    moltov
+    moltov,
+    mail
 } from "../assets/icons";
 
 export const skills = [
@@ -145,19 +145,19 @@ export const experiences = [
 
 export const socialLinks = [
     {
-        name: 'Contact',
-        iconUrl: contact,
-        link: '/contact',
+        name: 'Mail',
+        iconUrl: mail,
+        link: 'mailto:sudharsansaravanan2623@gmail.com',
     },
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/SudharsanSaravanan',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/sudharsan-saravanan-456544299/',
     }
 ];
 

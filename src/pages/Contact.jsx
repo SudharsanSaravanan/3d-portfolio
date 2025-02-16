@@ -5,6 +5,7 @@ import Loader from '../components/Loader';
 import Fox from '../models/Fox';
 import useAlert from '../hooks/useAlert';
 import Alert from '../components/Alert';
+import { socialLinks } from '../constants';
 
 const Contact = () => {
   const FormRef = useRef(null);
@@ -17,6 +18,7 @@ const Contact = () => {
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -59,8 +61,7 @@ const Contact = () => {
 
       <div className="flex-1 min-w-[50%] flex flex-col h-[100vh]">
         <h1 className="head-text">Get in Touch</h1>
-        <form className="w-full flex flex-col gap-7 mt-14" onSubmit={handleSubmit}
-        >
+        <form className="w-full flex flex-col gap-7 mt-14" onSubmit={handleSubmit}>
           <label className="text-black-500 font-semibold">
             Name
             <input 
@@ -103,15 +104,46 @@ const Contact = () => {
             onBlur={handleBlur}
             />
           </label>
-          <button 
-          type='submit' 
-          className="btn" 
-          disabled={isLoading}
-          onFocus={handleFocus} 
-          onBlur={handleBlur}
-          >
-            {isLoading ? 'Sending...' : 'Send Message'}
-          </button>
+
+          <div className="flex flex-col gap-6">
+            <button 
+            type='submit' 
+            className="btn" 
+            disabled={isLoading}
+            onFocus={handleFocus} 
+            onBlur={handleBlur}
+            >
+              {isLoading ? 'Sending...' : 'Send Message'}
+            </button>
+
+            <div className="flex justify-center gap-8">
+              <a
+                href="mailto:sudharsansaravanan2623@gmail.com"
+                className="flex items-center gap-2 hover:text-blue-500 transition-colors"
+              >
+                <img src={socialLinks[0].iconUrl} alt="Contact" className="w-6 h-6" />
+                <span className="font-medium">Mail</span>
+              </a>
+              <a
+                href="https://github.com/SudharsanSaravanan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-blue-500 transition-colors"
+              >
+                <img src={socialLinks[1].iconUrl} alt="GitHub" className="w-6 h-6" />
+                <span className="font-medium">GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sudharsan-saravanan-456544299/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-blue-500 transition-colors"
+              >
+                <img src={socialLinks[2].iconUrl} alt="LinkedIn" className="w-6 h-6" />
+                <span className="font-medium">LinkedIn</span>
+              </a>
+            </div>
+          </div>
         </form>
       </div>
 

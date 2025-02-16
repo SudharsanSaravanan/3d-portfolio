@@ -5,7 +5,6 @@ License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 Source: https://sketchfab.com/3d-models/foxs-islands-163b68e09fcc47618450150be7785907
 Title: Fox's islands
 */
-
 import React, { useRef, useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { events, useFrame, useThree } from '@react-three/fiber'
