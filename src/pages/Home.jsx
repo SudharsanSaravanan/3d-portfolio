@@ -1,5 +1,6 @@
 import { useState, Suspense, useEffect, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
+import Loader from '../components/Loader';
 import Island from '../models/Island';
 import Sky from '../models/Sky';
 import Bird from '../models/Bird';
@@ -8,25 +9,30 @@ import HomeInfo from '../components/HomeInfo';
 import sakura from '../assets/sakura.mp3';
 import { soundoff, soundon } from '../assets/icons';
 
-const LoaderComponent = () => (
-  <mesh>
-    <boxGeometry args={[1, 1, 1]} />
-    <meshStandardMaterial color="hotpink" />
-  </mesh>
-);
-
 const Home = () => {
   const audioRef = useRef(null);
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
-  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+  const [isPlayingMusic, setIsPlayingMusic] = useState(true);
 
   useEffect(() => {
     audioRef.current = new Audio(sakura);
     audioRef.current.volume = 0.4;
     audioRef.current.loop = true;
 
-    // Don't try to autoplay - wait for user interaction
+    // Try to autoplay
+    const playAudio = async () => {
+      try {
+        await audioRef.current.play();
+        setIsPlayingMusic(true);
+      } catch (error) {
+        console.error("Autoplay failed:", error);
+        setIsPlayingMusic(false);
+      }
+    };
+
+    playAudio();
+
     return () => {
       if (audioRef.current) {
         audioRef.current.pause();
@@ -35,6 +41,7 @@ const Home = () => {
     };
   }, []);
 
+  // Handle music toggle
   const handleMusicToggle = () => {
     if (!isPlayingMusic) {
       audioRef.current.play()
@@ -91,13 +98,13 @@ const Home = () => {
         className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`} 
         camera={{ near: 0.1, far: 1000 }}
       >
-        <Suspense fallback={<LoaderComponent />}>
-          <directionalLight position={[1, 1, 1]} intensity={2} />
-          <ambientLight intensity={0.5} />
-          <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
+        <Suspense fallback={<Loader />}>
+          <directionalLight position={[1,1,1]} intensity={2} />
+          <ambientLight intensity={0.5}/>
+          <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1}/>
 
           <Bird />
-          <Sky isRotating={isRotating} />
+          <Sky isRotating={isRotating}/>
           <Island
             position={islandPosition}
             scale={islandScale}
