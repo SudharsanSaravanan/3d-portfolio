@@ -1,10 +1,14 @@
-import React from 'react'
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import React from 'react';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { skills, experiences } from '../constants';
 import CTA from '../components/CTA';
 
 const About = () => {
+  const openResume = () => {
+    window.open('./resume.pdf', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section className="max-container">
       <h1 className="head-text">
@@ -17,14 +21,39 @@ const About = () => {
         </p>
       </div>
 
+      <div className="mt-8 flex justify-center">
+        <button
+          onClick={openResume}
+          className="relative group overflow-hidden px-8 py-4 bg-transparent border-2 border-blue-500 rounded-xl transition-all duration-300 ease-in-out hover:bg-blue-500 hover:text-white"
+        >
+          <span className="relative z-10 flex items-center gap-2 font-medium">
+            <svg 
+              className="w-5 h-5 transition-transform group-hover:rotate-12" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth="2" 
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            View Resume
+          </span>
+          <div className="absolute inset-0 -z-10 bg-blue-500 transform origin-left scale-x-0 transition-transform duration-300 ease-in-out group-hover:scale-x-100" />
+        </button>
+      </div>
+
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">My Skills</h3>
         <div className="mt-16 flex flex-wrap gap-12">
           {skills.map((skill) => (
-            <div className="block-container w-10 h-10 sm:w-20 sm:h-20">
+            <div className="block-container w-10 h-10 sm:w-20 sm:h-20" key={skill.name}>
               <div className="btn-back rounded-xl" />
               <div className="btn-front rounded-xl flex justify-center items-center">
-                <img 
+                <img
                   src={skill.imageUrl}
                   alt={skill.name}
                   className="w-1/2 h-1/2 object-contain"
@@ -38,12 +67,12 @@ const About = () => {
       <div className="py-16">
         <h3 className="subhead-text">My Experience</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
-        <p>
-          Creating smooth digital experiences with React, JavaScript, and modern web technologies. Continuously improving my skills in Data Structures and Algorithms (DSA) to build efficient solutions.
-        </p>
+          <p>
+            Creating smooth digital experiences with React, JavaScript, and modern web technologies. Continuously improving my skills in Data Structures and Algorithms (DSA) to build efficient solutions.
+          </p>
         </div>
 
-        <div className="mt-12 flex"> 
+        <div className="mt-12 flex">
           <VerticalTimeline>
             {experiences.map((experience) => (
               <VerticalTimelineElement
@@ -51,10 +80,10 @@ const About = () => {
                 date={experience.date}
                 icon={
                   <div className="flex justify-center items-center w-full h-full">
-                    <img 
-                    src={experience.icon}
-                    alt={experience.company_name}
-                    className="w-[60%] h-[60%] object-contain"
+                    <img
+                      src={experience.icon}
+                      alt={experience.company_name}
+                      className="w-[60%] h-[60%] object-contain"
                     />
                   </div>
                 }
@@ -93,7 +122,7 @@ const About = () => {
 
       <CTA />
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
