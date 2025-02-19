@@ -134,9 +134,9 @@ export const experiences = [
         iconBg: "#accbe1",
         date: "Dec 2024 - Jan 2025",
         points: [
-            "Led the development of multiple React applications and mentored junior developers.",
+            "Developed multiple React applications.",
             "Built 'Leaf Link', a real-time messaging app using React.js and Firestore, implementing responsive UI with Bootstrap 5 and Material UI.",
-            "Developed 'Moltov', a movie trailer streaming app that fetches real-time data from TMDB API, showcasing expertise in API integration and state management.",
+            "Developed 'Moltov', a movie trailer streaming app that fetches real-time data from TMDB API, showcasing knowledge in API integration and state management.",
             "Focused on creating seamless user experiences by efficiently handling application state and optimizing performance.",
         ],
     }
