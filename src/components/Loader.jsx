@@ -5,7 +5,6 @@ const Loader = () => {
   const [progress, setProgress] = useState(0);
   
   useEffect(() => {
-    // Simulate loading progress
     const interval = setInterval(() => {
       setProgress((prevProgress) => {
         if (prevProgress >= 100) {
