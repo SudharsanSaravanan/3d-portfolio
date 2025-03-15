@@ -1,4 +1,4 @@
-import { personal } from "../assets/images";
+import { metatron, zidio } from "../assets/images";
 import {
     github,
     linkedin,
@@ -128,16 +128,27 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React Web Application Developer",
-        company_name: "Personal",
-        icon: personal,
-        iconBg: "#accbe1",
-        date: "Dec 2024 - Jan 2025",
+        title: "Frontend Developer Intern",
+        company_name: "Metatron Cube",
+        icon: metatron,
+        iconBg: "#ffffff",
+        date: "Mar 2025 - Present",
         points: [
-            "Developed multiple React applications.",
-            "Built 'Leaf Link', a real-time messaging app using React.js and Firestore, implementing responsive UI with Bootstrap 5 and Material UI.",
-            "Developed 'Moltov', a movie trailer streaming app that fetches real-time data from TMDB API, showcasing knowledge in API integration and state management.",
-            "Focused on creating seamless user experiences by efficiently handling application state and optimizing performance.",
+            "Developing and enhancing a restaurant management system using the Frappe framework and JavaScript.",
+            "Focusing on UI/UX improvements, system integration, and optimizing frontend workflows for better user experience.",
+            "Configuring and managing a Linux server, setting up dependencies, and ensuring smooth system operations.",
+        ],
+    },
+    {
+        title: "Web Development Intern",
+        company_name: "Zidio Development",
+        icon: zidio,
+        iconBg: "#ffffff",
+        date: "Feb 2025 - Present",
+        points: [
+            "Collaborated with a team to develop a project management application using the MERN stack, competing against other teams.",
+            "Implemented authentication, user panels, and admin panels, allowing seamless task management and user role differentiation.",
+            "Gained hands-on experience in Git, teamwork, and leadership while optimizing project workflows and implementing key features.",
         ],
     }
 ];

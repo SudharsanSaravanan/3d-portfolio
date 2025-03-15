@@ -1,5 +1,7 @@
-import personal from './personal.ico'
+import metatron from './metatron.png'
+import zidio from './zidio.png'
 
 export {
-    personal
+    metatron,
+    zidio
 }
