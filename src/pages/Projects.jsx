@@ -14,7 +14,7 @@ const Projects = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Built multiple React applications, showcasing my ability to create seamless user experiences. Notable projects include Leaf Link, a messaging app, and Moltov, a movie trailer streaming platform that integrates APIs with React. These projects highlight my expertise in efficient state management, external data integration, and interactive web development.
+        Built multiple React applications, showcasing my ability to create seamless user experiences. Notable projects include Leaf Link, a messaging app; Moltov, a movie trailer streaming platform that integrates APIs with React; and a Task Management System developed during my internship at Zidio, featuring role-based authentication, task tracking, and real-time notifications. These projects highlight my expertise in efficient state management, external data integration, and interactive web development.
         </p>
       </div>
 

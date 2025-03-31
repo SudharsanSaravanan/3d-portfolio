@@ -7,6 +7,7 @@ import moltov from './moltov.ico'
 import leaf from './leaf.ico'
 import hospital from './hospital.ico'
 import mail from './mail.ico'
+import task from './task.ico'
 
 export {
     github,
@@ -17,5 +18,6 @@ export {
     moltov,
     leaf,
     hospital,
-    mail
+    mail,
+    task,
 }

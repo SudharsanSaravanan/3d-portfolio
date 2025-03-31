@@ -5,7 +5,8 @@ import {
     leaf,
     hospital,
     moltov,
-    mail
+    mail,
+    task,
 } from "../assets/icons";
 
 export const skills = [
@@ -42,6 +43,11 @@ export const skills = [
     {
         imageUrl: "https://skillicons.dev/icons?i=react",
         name: "React",
+        type: "Frontend Framework",
+    },
+    {
+        imageUrl: "https://skillicons.dev/icons?i=nextjs",
+        name: "NextJS",
         type: "Frontend Framework",
     },
     {
@@ -123,7 +129,8 @@ export const skills = [
         imageUrl: "https://skillicons.dev/icons?i=vite",
         name: "Vite",
         type: "Build Tool",
-    }
+    },
+
 ];
 
 export const experiences = [
@@ -144,7 +151,7 @@ export const experiences = [
         company_name: "Zidio Development",
         icon: zidio,
         iconBg: "#ffffff",
-        date: "Feb 2025 - Mar 2025",
+        date: "Feb 2025 - Mar 2025 ",
         points: [
             "Collaborated with a team to develop a project management application using the MERN stack, competing against other teams.",
             "Implemented authentication, user panels, and admin panels, allowing seamless task management and user role differentiation.",
@@ -174,16 +181,24 @@ export const socialLinks = [
 
 export const projects = [
     {
+        iconUrl: task,  // Replace with actual image URL or asset
+        theme: 'btn-back-black',
+        name: 'Zidio Task Management System',
+        description: 'An intern project developed for Zidio Development using the MERN stack. This task management system supports admin and user roles, enabling task creation, user registration with occupation and address, task verification, and a dashboard displaying task deadlines with notifications.',
+        technologies: ["MongoDB", "Express.js", "React", "Node.js"],
+        link: 'https://github.com/SudharsanSaravanan/Zidio-Task-Management-System',
+    },
+    {
         iconUrl: moltov,  // Replace with actual image URL or asset
         theme: 'btn-back-red',
         name: 'Moltov - Movie Trailer Streaming App',
-        description: 'A React.js-based movie streaming app that fetches real-time movie data from TMDB API. The app features an intuitive UI, efficient state management, and smooth API integrations.',
+        description: 'A React.js-based movie streaming app that fetches real-time movie data from the TMDB API. The app features an intuitive UI, efficient state management, smooth API integrations, and Firebase authentication for user login and data persistence.',
         technologies: ["React.js", "Node.js", "Axios", "Firebase"],
         link: 'https://github.com/SudharsanSaravanan/MOLTOV-StreamingApp',
     },
     {
         iconUrl: leaf,  // Replace with actual image URL or asset
-        theme: 'btn-back-green',
+        theme: 'btn-back-yellow',
         name: 'Leaf-Link - Real-Time Messaging App',
         description: 'Developed a messaging application using React.js and Firestore, with responsive UI implemented using Bootstrap 5 and Material UI. Ensured smooth real-time data synchronization for instant communication.',
         technologies: ["React.js", "Firestore", "Material UI"],
