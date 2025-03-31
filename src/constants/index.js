@@ -144,7 +144,7 @@ export const experiences = [
         company_name: "Zidio Development",
         icon: zidio,
         iconBg: "#ffffff",
-        date: "Feb 2025 - Present",
+        date: "Feb 2025 - Mar 2025",
         points: [
             "Collaborated with a team to develop a project management application using the MERN stack, competing against other teams.",
             "Implemented authentication, user panels, and admin panels, allowing seamless task management and user role differentiation.",
