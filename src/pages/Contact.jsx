@@ -134,7 +134,7 @@ const Contact = () => {
                 <span className="font-medium">GitHub</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/sudharsan-saravanan-456544299/"
+                href="https://www.linkedin.com/in/sudharsana-saravanan-s-456544299/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-blue-500 transition-colors"
