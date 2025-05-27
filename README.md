@@ -32,7 +32,7 @@ An interactive and visually stunning **3D personal portfolio** built using **Rea
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/3d-portfolio.git
+git clone https://github.com/SudharsanSaravanan/3d-portfolio.git
 
 # Navigate into the directory
 cd 3d-portfolio
