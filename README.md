@@ -1,27 +1,27 @@
-# 🌟 3D Portfolio Website
+# 3D Portfolio Website
 
 An interactive and visually stunning **3D personal portfolio** built using **React.js**, **Three.js**, and **Tailwind CSS**. This site showcases my projects, skills, and background in a dynamic, immersive experience.
 
-## 🚀 Features
+## Features
 
-- 🎮 3D model interactions powered by **Three.js**
-- ⚛️ Built with **React.js** for component-based structure
-- 🎨 Styled using **Tailwind CSS** for modern responsive design
-- 💼 Interactive sections for **About**, **Projects**, and **Contact**
-- 🌐 Fully responsive and optimized for all devices
-- ⚡ Smooth animations and transitions
+- 3D model interactions powered by **Three.js**
+- Built with **React.js** for component-based structure
+- Styled using **Tailwind CSS** for modern responsive design
+- Interactive sections for **About**, **Projects**, and **Contact**
+- Fully responsive and optimized for all devices
+- Smooth animations and transitions
 
-## 📸 Demo
+## Demo
 
 [Live Demo](https://sudharsan-portfolio-six.vercel.app/)  
 
-## 🧩 Tech Stack
+## Tech Stack
 
 - **Frontend**: React.js
 - **3D Graphics**: Three.js (@react-three/fiber, drei)
 - **Styling**: Tailwind CSS
 
-## ⚙️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
